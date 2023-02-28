@@ -41,7 +41,7 @@ More information on the different <a href="https://en.wikipedia.org/wiki/Numeral
   
   
 ## Live Demo
-[<img src="https://freepngimg.com/download/play_now_button/25403-5-play-now-button-transparent.png" alt="run-button" height="40px" />](https://convertor-decimal-to-binary-or-hex.mirokrastanov.repl.co/)
+[<img src="https://github.com/mirokrastanov/Software-Engineering-SoftUni/blob/main/miscellaneous/click-here-btn-02.png?raw=true" alt="run-button" height="40px" />](https://convertor-decimal-to-binary-or-hex.mirokrastanov.repl.co/)
   
   
 ## [Source Code](https://github.com/mirokrastanov/decimal-binary-hex-calculator/blob/main/script.js)
