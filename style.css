@@ -10,6 +10,28 @@ html {
     color: #234465;
 }
 
+body {
+    background: rgb(0, 255, 191);
+    background: linear-gradient(90deg, rgba(0, 255, 191, 1) 0%, rgba(0, 193, 255, 1) 100%);
+    
+}
+
+input[type="button"],
+button {
+    padding: 0.3rem 1rem;
+    font-size: 22px;
+    margin: 1rem 0px;
+    color: #444444;
+    background: transparent;
+    border-radius: 12px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 0px;
+    border: 2px solid #444444;
+    cursor: pointer;
+}
+
 
 
 
