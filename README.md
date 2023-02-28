@@ -5,10 +5,10 @@ A simple calculator for conversion from Decimal to Binary &amp; Decimal to Hexad
 
 ## Description
 This calculator converts numbers from the Decimal numeral system to the Binary or Hexadecimal numeral systems.
-More information on the <a href="https://en.wikipedia.org/wiki/Decimal">Decimal numeral system</a>.
-More information on the <a href="https://en.wikipedia.org/wiki/Binary_number">Binary numeral system</a>.
-More information on the <a href="https://en.wikipedia.org/wiki/Hexadecimal">Hexadecimal numeral system</a>.
-More information on the different <a href="https://en.wikipedia.org/wiki/Numeral_system">Numeral Systems</a>.
+- More information on the <a href="https://en.wikipedia.org/wiki/Decimal">Decimal numeral system</a>.
+- More information on the <a href="https://en.wikipedia.org/wiki/Binary_number">Binary numeral system</a>.
+- More information on the <a href="https://en.wikipedia.org/wiki/Hexadecimal">Hexadecimal numeral system</a>.
+- More information on the different <a href="https://en.wikipedia.org/wiki/Numeral_system">Numeral Systems</a>.
 
 
 ## Input & Output
