@@ -57,6 +57,22 @@ button:hover {
     background: #444444;
 }
 
+input,
+select {
+    font-size: 1.0em;
+}
+
+#container,
+footer {
+    width: 30%;
+    margin: 3px auto;
+    text-align: left;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    padding: 3px 10px;
+    position: relative;
+    background-color: rgb(255, 246, 235);
+}
 
 
 
