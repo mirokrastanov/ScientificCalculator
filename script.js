@@ -26,7 +26,24 @@ function solve() {
             14: 'E',
             15: 'F',
         };
-        
+        if (select.value == "hexadecimal") {
+            output.value = "";
+            let initial = Number(decimalValue);
+            if (initial == 0) {
+                output.value = '0';
+            } else {
+                while (initial > 0) {
+                    let remainder = initial % 16;
+                    initial = Math.floor(initial / 16);
+                    if (remainder > 9) {
+                        remainder = hexCode[remainder];
+                    }
+                    hexValue.push(remainder);
+                }
+                let hexFinal = hexValue.reverse().join("");
+                output.value = hexFinal;
+            }
+        } 
     });
 
 
