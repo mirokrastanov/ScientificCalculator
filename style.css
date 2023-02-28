@@ -74,7 +74,22 @@ footer {
     background-color: rgb(255, 246, 235);
 }
 
+label,
+input {
+    display: block;
+    width: 100%;
+    margin: 1px 0;
+}
 
-
+input,
+select {
+    border: 1px solid lightgrey;
+    outline: none;
+    border-radius: 6px;
+    padding: 5px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 
