@@ -14,7 +14,20 @@ function solve() {
         // select.append(hexOption);
         select.appendChild(hexOption);
     }
-   
+    button.addEventListener('click', () => {
+        let decimalValue = input.value;
+        let hexValue = [];
+        let binaryValue = [];
+        const hexCode = {
+            10: 'A',
+            11: 'B',
+            12: 'C',
+            13: 'D',
+            14: 'E',
+            15: 'F',
+        };
+        
+    });
 
 
 }
