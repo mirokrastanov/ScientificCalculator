@@ -43,7 +43,21 @@ function solve() {
                 let hexFinal = hexValue.reverse().join("");
                 output.value = hexFinal;
             }
-        } 
+        } else if (select.value == "binary") {
+            output.value = "";
+            let initial = Number(decimalValue);
+            if (initial == 0) {
+                output.value = '0';
+            } else {
+                while (initial > 0) {
+                    let remainder = initial % 2;
+                    initial = Math.floor(initial / 2);
+                    binaryValue.push(remainder);
+                }
+                let binaryFinal = binaryValue.reverse().join("");
+                output.value = binaryFinal;
+            }
+        }
     });
 
 
