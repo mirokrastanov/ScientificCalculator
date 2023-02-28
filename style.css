@@ -92,4 +92,13 @@ select {
     margin-right: auto;
 }
 
+#result {
+    border-radius: 6px;
+    margin-bottom: 6px;
+    background-color: white;
+}
 
+input:hover,
+select:hover {
+    background-color: rgba(216, 216, 216, 0.247);
+}
