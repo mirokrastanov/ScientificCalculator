@@ -47,7 +47,15 @@ button {
     transition: all linear 0.2s;
 }
 
+button:hover {
+    background-color: antiquewhite;
+}
 
+input[type="button"]:hover,
+button:hover {
+    color: white;
+    background: #444444;
+}
 
 
 
