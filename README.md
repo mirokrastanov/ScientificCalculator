@@ -41,7 +41,7 @@ This calculator converts numbers from the Decimal numeral system to the Binary o
   
   
 ## Live Demo
-[<img src="https://github.com/mirokrastanov/Software-Engineering-SoftUni/blob/main/miscellaneous/start-test-btn.png?raw=true" alt="run-button" height="40px" />](https://convertor-decimal-to-binary-or-hex.mirokrastanov.repl.co/)
+[<img src="https://github.com/mirokrastanov/Software-Engineering-SoftUni/blob/main/miscellaneous/try-now-btn.png?raw=true" alt="run-button" height="40px" />](https://convertor-decimal-to-binary-or-hex.mirokrastanov.repl.co/)
   
   
 ## [Source Code](https://github.com/mirokrastanov/decimal-binary-hex-calculator/blob/main/script.js)
