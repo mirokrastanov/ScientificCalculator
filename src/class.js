@@ -18,6 +18,8 @@ export class Calculator {
     }
     appendNumber(number) {
         if (number == '.' && this.currentValue.includes('.')) return;
+        if (number == '0' && this.currentValue.length == 1
+            && this.currentValue[this.currentValue.length - 1] == '0') return;
         this.currentValue += number.toString();
     }
     chooseOperation(operation) {
