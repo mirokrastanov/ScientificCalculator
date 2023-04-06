@@ -1,3 +1,5 @@
+import { operations } from "./operations.js";
+
 export class Calculator {
     constructor(previousEl, currentEl) {
         this.previousEl = previousEl;
@@ -28,7 +30,14 @@ export class Calculator {
         this.currentValue = '';
     }
     compute() {
-
+        let computation;
+        const prev = Number(this.previousValue);
+        const current = Number(this.currentValue);
+        if (isNaN(prev) || isNaN(current)) return;
+        computation = operations[this.operation](prev, current);
+        this.currentValue = computation;
+        this.operation = undefined;
+        this.previousValue = '';
     }
     updateDisplay() {
         this.currentEl.textContent = this.currentValue;

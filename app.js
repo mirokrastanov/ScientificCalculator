@@ -10,7 +10,12 @@ board.addEventListener('click', (e) => {
     e.preventDefault();
     let target = e.target;
     if (target.tagName != 'BUTTON') return;
+    console.log(target.textContent);
     if (target.textContent != Number(target.textContent) && target.textContent != '.') {
+        if (target.textContent == '=') {
+            calculator.compute();
+            calculator.updateDisplay();
+        }
         calculator.chooseOperation(target.textContent);
         calculator.updateDisplay();
     } else {
