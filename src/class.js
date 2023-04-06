@@ -14,6 +14,9 @@ export class Calculator {
 
     }
     appendNumber(number) {
+        if (number == '.' && this.currentValue.includes('.')) {
+            return;
+        }
         this.currentValue += number.toString();
     }
     chooseOperation(operation) {
