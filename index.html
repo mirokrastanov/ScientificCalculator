@@ -2,35 +2,69 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="style.css">
-    <title>NUMBER CONVERTOR</title>
-    <script src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <script src="app.js" type="module"></script>
 </head>
 
 <body>
-    <div id="container">
-        <label for="input">Number</label>
-        <input type="number" id="input" /><br>
-        <label for="selectMenuFrom">From</label>
-        <select id="selectMenuFrom">
-            <option selected value="decimal">Decimal</option>
-        </select>
-        <label for="selectMenuTo">To</label>
-        <select id="selectMenuTo">
-            <option selected value=""></option>
-        </select>
-        <div id="btn-wrapper">
-            <button>Convert it</button>
+    <header></header>
+
+    <main>
+        <div class="calculator-grid">
+            <div class="output">
+                <div class="previous-operand"></div>
+                <div class="current-operand"></div>
+            </div>
+            <!-- new row -->
+            <button class="span-two">AC</button>
+            <button>DEL</button>
+            <button>÷</button>
+            <button>Store</button>
+            <button>Recall</button>
+
+            <!-- new row -->
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>&#215;</button>
+            <button>(</button>
+            <button>)</button>
+
+            <!-- new row -->
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>+</button>
+            <button>ln</button>
+            <button>log</button>
+
+            <!-- new row -->
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button>-</button>
+            <button>&Sqrt;</button>
+            <button>x<sup>y</sup></button>
+
+            <!-- new row -->
+            <button>.</button>
+            <button>0</button>
+            <button class="span-two">=</button>
+            <button></button>
+            <button></button>
         </div>
 
-    </div>
+
+    </main>
+
     <footer>
         <label for="result">Result</label>
         <input type="text" name="output" id="result" disabled readonly />
     </footer>
-    <script>
-        solve();
-    </script>
 </body>
 
 </html>
