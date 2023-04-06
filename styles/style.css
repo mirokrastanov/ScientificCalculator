@@ -1,38 +1,32 @@
-@import url('https://fonts.googleapis.com/css?family=Lato');
-
-* {
+*,
+*::before,
+*::after {
     margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gotham Rounded', sans-serif;
+    font-weight: normal;
 }
 
 body {
-    background: rgb(0, 255, 191);
+    padding: 0;
     background: linear-gradient(90deg, rgba(0, 255, 191, 1) 0%, rgba(0, 193, 255, 1) 100%);
-    font-family: 'Prototype';
-    font-weight: 900;
-
 }
 
 .calculator-grid {
     display: grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(7, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(7, 100px);
+
 }
 
-button {
-    font-family: 'Prototype';
-    font-weight: 900;
-    padding: 0.3rem 1rem;
-    font-size: 22px;
-    color: #444444;
-    background: transparent;
-    border-radius: 12px;
-    outline: none;
-    text-transform: uppercase;
-    letter-spacing: 0px;
-    border: 2px solid #444444;
-    margin: 0.5rem auto 0.2rem auto;
-    transition: all linear 0.2s;
-}
-
-button:hover {
+.calculator-grid > button {
     cursor: pointer;
-    transform: scale(1.1);
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.75);
 }
+
