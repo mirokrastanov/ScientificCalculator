@@ -9,7 +9,7 @@ allBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
         e.preventDefault();
         let target = e.currentTarget;
-        console.log(target.textContent);
+        // console.log(target.textContent);
         if (target.textContent != Number(target.textContent) && target.textContent != '.') {
             if (target.textContent == '=') {
                 calculator.compute();
