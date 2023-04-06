@@ -1,0 +1,30 @@
+
+# HTML & CSS - Ignore ZIP submission folder
+_submission/
+
+# JAVA
+# Ignore clutter folders & files
+out/
+.idea/
+*iml
+# Default ignored folders & files by IntelliJ
+/shelf/
+/workspace.xml
+
+# Python / PyCharm
+venv/
+.vscode/
+
+
+
+# Ext
+.zip
+*.dat 
+
+
+# JS packages
+node_modules/
+
+# JS private templates & misc
+_templates/
+
