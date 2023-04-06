@@ -1,3 +1,5 @@
+# IN PROGRESS ...
+
 # Calculator for Decimal-Binary & Decimal-Hexadecimal conversions
 A simple calculator for conversion from Decimal to Binary &amp; Decimal to Hexadecimal. Created using JavaScript.
 
