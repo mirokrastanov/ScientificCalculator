@@ -1,4 +1,6 @@
-# IN PROGRESS - Updating this to a complete Scientific Calculator(NYI)... 
+# IN PROGRESS (NYI) - This project is currently being Upgrated to a Scientific Calculator. 
+
+<!--
 
 # Calculator for Decimal-Binary & Decimal-Hexadecimal conversions
 A simple calculator for conversion from Decimal to Binary &amp; Decimal to Hexadecimal. Created using JavaScript.
@@ -48,3 +50,4 @@ This calculator converts numbers from the Decimal numeral system to the Binary o
   
 ## [Source Code](https://github.com/mirokrastanov/decimal-binary-hex-calculator/blob/main/script.js)
  
+-->
