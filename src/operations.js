@@ -1,4 +1,9 @@
+// function strings
 //  +, -, ×, ÷, x2, 
+
+// after adding a new --- 2 parameter function (a MAIN function) --- go to util and 
+// update the --- notAMainFunction --- to include the new operations[keyName]
+
 export const operations = {
     '+': sum,
     '-': subtract,
