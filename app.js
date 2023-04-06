@@ -9,11 +9,10 @@ const calculator = new Calculator(previousEl, currentEl);
 board.addEventListener('click', (e) => {
     e.preventDefault();
     let target = e.target;
-    if (target.tagName != 'BUTTON') {
-        return;
-    }
+    if (target.tagName != 'BUTTON') return;
     if (target.textContent != Number(target.textContent) && target.textContent != '.') {
-        return; // operations function
+        calculator.chooseOperation(target.textContent);
+        calculator.updateDisplay();
     } else {
         calculator.appendNumber(target.textContent);
         calculator.updateDisplay();

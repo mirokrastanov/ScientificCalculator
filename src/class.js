@@ -4,6 +4,7 @@ export class Calculator {
         this.currentEl = currentEl;
         this.previousValue = '';
         this.currentValue = '';
+        this.operation = undefined;
     }
     clear() {
         this.previousValue = '';
@@ -14,18 +15,23 @@ export class Calculator {
 
     }
     appendNumber(number) {
-        if (number == '.' && this.currentValue.includes('.')) {
-            return;
-        }
+        if (number == '.' && this.currentValue.includes('.')) return;
         this.currentValue += number.toString();
     }
     chooseOperation(operation) {
-
+        if (this.currentValue == '') return;
+        if (this.previousValue != '') {
+            this.compute();
+        }
+        this.operation = operation;
+        this.previousValue = this.currentValue;
+        this.currentValue = '';
     }
     compute() {
 
     }
     updateDisplay() {
         this.currentEl.textContent = this.currentValue;
+        this.previousEl.textContent = this.previousValue;
     }
 }
