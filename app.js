@@ -18,8 +18,6 @@ board.addEventListener('click', (e) => {
         calculator.appendNumber(target.textContent);
         calculator.updateDisplay();
     }
-    console.log(calculator);
 
-    currentEl.textContent = target.textContent;
 });
 
