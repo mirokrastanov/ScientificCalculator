@@ -25,8 +25,9 @@ export class Calculator {
     }
     chooseOperation(operation) {
         if (this.currentValue == '') return;
-        if (this.previousValue != '') this.compute();
-        else {
+        if (this.previousValue != '') {
+            this.compute();
+        } else {
             if (operation == 'x2') {
                 this.operation = 'x2';
                 this.compute();
@@ -34,6 +35,10 @@ export class Calculator {
             }
         }
         this.operation = operation;
+        if (this.operation == 'x2') {
+            this.compute();
+            return;
+        }
         this.previousValue = this.currentValue;
         this.currentValue = '';
     }
