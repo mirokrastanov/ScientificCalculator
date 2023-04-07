@@ -10,9 +10,10 @@ export const operations = {
     '×':  multiply, // alt (a, b) => a * b,
     '÷': divide,
     'x2': xPower2,
+    'xy': xPowerY,
 
 }
-
+// a (prev) | b (current)
 function sum(a, b) {        // 2 parameter function = MAIN
     return a + b;
 }
@@ -25,7 +26,10 @@ function multiply(a, b) {       // 2 parameter function = MAIN
 function divide(a, b) {     // 2 parameter function = MAIN
     return a / b;
 }
-function xPower2(a) {
+function xPower2(a) {       
     console.log(a, Math.pow(a, 2));
     return Math.pow(a, 2);
+}
+function xPowerY(a, b) {    // 2 parameter function = MAIN
+    return Math.pow(a, b);
 }

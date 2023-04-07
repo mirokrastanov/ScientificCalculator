@@ -36,14 +36,14 @@ export class Calculator {
         if (this.previousValue != '') {
             this.compute();
         } else {
-            if (notAMainFunction(operation)) {         // CHECK NON MAIN FUNCTION
+            if (notAMainFunction(operation)) { // CHECK NON MAIN FUNCTION (not with 2 parameters)
                 this.operation = operation;
                 this.compute();
                 return;
             }
         }
         this.operation = operation;
-        if (notAMainFunction(operation)) {         // CHECK NON MAIN FUNCTION
+        if (notAMainFunction(operation)) {     // CHECK NON MAIN FUNCTION
             this.compute();
             return;
         }
