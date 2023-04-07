@@ -58,6 +58,10 @@ export class Calculator {
                 return;
             }
         }
+        if (this.currentValue == '.') return;
+        else if (this.currentValue.length > 1 && this.currentValue[0] == '.') {
+            this.currentValue = '0' + this.currentValue;
+        }
         if (this.previousValue != '') {
             this.compute();
         } else {
