@@ -40,13 +40,15 @@ allBtns.forEach(btn => {
                     if (calculator.answer == null) return;
                     calculator.clearCurrent();
                     calculator.appendNumber(calculator.callPreviousAnswer());
-                } else if (target.textContent == '' && target.id == 'y-root-x') {
+                } else if (target.id == 'y-root-x') {
                     if (calculator.currentValue == '') return;
+                    // if (calculator.previousValue != '') calculator.compute();
                     calculator.chooseOperation('y√x');
                 } else { 
                     // includes: % x! 
                     // must have an operation created with the same key name
                     if (calculator.currentValue == '') return;
+                    if (calculator.previousValue != '') calculator.compute();
                     calculator.chooseOperation(target.textContent);
                 }
                 calculator.updateDisplay();
