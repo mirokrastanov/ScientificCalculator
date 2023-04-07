@@ -15,7 +15,7 @@ export class Calculator {
         this.operation = undefined;
     }
     delete() {
-
+        this.currentValue = this.currentValue.toString().slice(0, -1);
     }
     appendNumber(number) {
         // console.log(number, this.currentValue);

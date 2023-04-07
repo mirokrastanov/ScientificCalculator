@@ -21,6 +21,9 @@ allBtns.forEach(btn => {
                 if (target.textContent == 'AC') {
                     calculator.clear();
                     calculator.updateDisplay();
+                } else if (target.textContent == 'DEL') {
+                    calculator.delete();
+                    calculator.updateDisplay();
                 } else {
                     calculator.chooseOperation(target.textContent);
                     calculator.updateDisplay();
