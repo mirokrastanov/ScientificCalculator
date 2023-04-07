@@ -4,6 +4,7 @@ const allBtns = document.querySelectorAll('.calculator-grid > button');
 const currentEl = document.querySelector('.current-operand');
 const previousEl = document.querySelector('.previous-operand');
 const calculator = new Calculator(previousEl, currentEl);
+let afterEqualsInput = false;
 
 allBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
@@ -11,14 +12,22 @@ allBtns.forEach(btn => {
         let target = e.currentTarget;
         // console.log(target.textContent);
         if (target.textContent != Number(target.textContent) && target.textContent != '.') {
+            // not a number
             if (target.textContent == '=') {
+                afterEqualsInput = true;
                 calculator.compute();
                 calculator.updateDisplay();
             } else {
-                calculator.chooseOperation(target.textContent);
-                calculator.updateDisplay();
+                if (target.textContent == 'AC') {
+                    calculator.clear();
+                    calculator.updateDisplay();
+                } else {
+                    calculator.chooseOperation(target.textContent);
+                    calculator.updateDisplay();
+                }
             }
         } else {
+            // number
             calculator.appendNumber(target.textContent);
             calculator.updateDisplay();
         }
