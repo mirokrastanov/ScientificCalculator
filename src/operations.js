@@ -13,6 +13,7 @@ export const operations = {
     'xy': xPowerY,
     '√': sqrtX,
     'y√x': yRootX,
+    '%': calcPercent,
 
 }
 // a (prev) | b (current)
@@ -37,6 +38,9 @@ function xPowerY(a, b) {    // 2 parameter function = MAIN
 function sqrtX(a) {
     return Math.sqrt(a);
 }
-function yRootX(a, b) {
+function yRootX(a, b) {     // 2 parameter function = MAIN
     return Math.pow(a, (1 / b));
+}
+function calcPercent(a) {
+    return a / 100;
 }
