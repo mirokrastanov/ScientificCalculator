@@ -19,7 +19,7 @@ body {
     align-content: center;
     min-height: 100vh;
     grid-template-columns: repeat(7, 100px);
-    grid-template-rows: minmax(120px, auto) repeat(6, 80px);
+    grid-template-rows: minmax(120px, auto) 30px 80px 80px 80px 80px 80px 80px; /* repeat(7, 80px); */
 }
 
 .calculator-grid>button {
@@ -37,7 +37,7 @@ body {
 .span-two {
     grid-column: span 2;
 }
-
+    
 .output {
     grid-column: 1 / -1;
     background-color: rgba(0, 0, 0, 0.75);
@@ -52,12 +52,29 @@ body {
 
 .output .previous-operand {
     color: rgba(255, 255, 255, 0.75);
-    font-size: 1.5rem;
+    font-size: 1.7rem;
 }
 
 .output .current-operand {
     color: white;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
+}
+
+.ans-sto > p {
+    display: inline-block;
+}
+
+.ans-sto {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    color: white;
+    font-size: 1.2rem;
 }
 
 #water-mark {
