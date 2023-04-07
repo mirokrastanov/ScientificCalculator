@@ -66,7 +66,27 @@ export class Calculator {
         this.previousValue = '';
     }
     updateDisplay() {
-        this.currentEl.textContent = this.currentValue;
-        this.previousEl.textContent = this.previousValue;
+        if (this.currentValue[this.currentValue.length - 1] == '.') {
+            this.currentEl.textContent = this.currentValue;
+        } else {
+            this.currentEl.textContent = this.getDisplayNumber(this.currentValue);
+        }
+        if (this.operation != null) {
+            this.previousEl.textContent =
+                `${this.getDisplayNumber(this.previousValue)} ${this.operation}`;
+        }
+    }
+    getDisplayNumber(number) {
+        let [integer, decimal] = number.toString().split('.');
+        integer = integer.split('');
+        let final = [];
+        while (integer.length > 0) {
+            let result = '';
+            result += integer.pop();
+            if (integer.length > 0) result += integer.pop();
+            if (integer.length > 0) result += integer.pop();
+            final.push(result.split('').reverse().join(''));
+        }
+        return `${final.reverse().join(',')}${decimal ? `.${decimal}` : ''}`;
     }
 }
