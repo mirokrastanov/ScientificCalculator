@@ -11,6 +11,7 @@ export const operations = {
     '÷': divide,
     'x2': xPower2,
     'xy': xPowerY,
+    '√': sqrtX,
     'y√x': yRootX,
 
 }
@@ -32,6 +33,9 @@ function xPower2(a) {
 }
 function xPowerY(a, b) {    // 2 parameter function = MAIN
     return Math.pow(a, b);
+}
+function sqrtX(a) {
+    return Math.sqrt(a);
 }
 function yRootX(a, b) {
     return Math.pow(a, (1 / b));
