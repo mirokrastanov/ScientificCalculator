@@ -74,6 +74,8 @@ export class Calculator {
         if (this.operation != null) {
             this.previousEl.textContent =
                 `${this.getDisplayNumber(this.previousValue)} ${this.operation}`;
+        } else {
+            this.previousEl.textContent = '';
         }
     }
     getDisplayNumber(number) {

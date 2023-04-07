@@ -4,7 +4,7 @@ const allBtns = document.querySelectorAll('.calculator-grid > button');
 const currentEl = document.querySelector('.current-operand');
 const previousEl = document.querySelector('.previous-operand');
 const calculator = new Calculator(previousEl, currentEl);
-let afterEqualsInput = false;
+
 
 allBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
@@ -14,7 +14,6 @@ allBtns.forEach(btn => {
         if (target.textContent != Number(target.textContent) && target.textContent != '.') {
             // not a number
             if (target.textContent == '=') {
-                afterEqualsInput = true;
                 calculator.compute();
                 calculator.updateDisplay();
             } else {
