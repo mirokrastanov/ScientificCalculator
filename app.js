@@ -29,6 +29,10 @@ allBtns.forEach(btn => {
                     if (currentEl.textContent == '') return;
                     calculator.store(currentEl.textContent);
                     calculator.clearCurrent();
+                } else if (target.textContent == 'Ans') {
+                    if (calculator.answer == null) return;
+                    calculator.clearCurrent();
+                    calculator.appendNumber(calculator.callPreviousAnswer());
                 } else {
                     calculator.chooseOperation(target.textContent);
                 }

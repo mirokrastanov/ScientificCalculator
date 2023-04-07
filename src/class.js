@@ -9,6 +9,13 @@ export class Calculator {
         this.currentValue = '';
         this.operation = undefined;
         this.storage = null;
+        this.answer = null;
+    }
+    callPreviousAnswer() {
+        let result = this.answer;
+        if (result) {
+            return result;
+        } else return '';
     }
     recall() {
         let result = this.storage;
@@ -18,7 +25,7 @@ export class Calculator {
         } else return '';
     }
     store(number) {
-        this.storage =  number;
+        this.storage = number;
         return '';
     }
     clear() {
@@ -79,6 +86,7 @@ export class Calculator {
                 computation = operations[this.operation](current);
             } else return;
         } else computation = operations[this.operation](prev, current);
+        this.answer = computation.toString();
         this.currentValue = computation.toString();
         this.operation = undefined;
         this.previousValue = '';
