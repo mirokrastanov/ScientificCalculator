@@ -28,11 +28,12 @@ body {
     font-size: 2rem;
     border: 1px solid white;
     outline: none;
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(0, 193, 255, 1);
+    color: white;
 }
 
 .calculator-grid>button:hover {
-    background-color: rgba(255, 255, 255, 0.9);
+    color: rgba(0, 193, 255, 1);
 }
 
 .span-two {
@@ -107,12 +108,27 @@ body {
     height: 70%;
 }
 
-#y-root-x p {
-    display: none;
+#y-root-x p:nth-of-type(1) {
+    position: relative;
+    left: -13px;
+    top: 10px;
+    font-size: 20px;
+}
+
+#y-root-x p:nth-of-type(2) {
+    position: relative;
+    top: -3px;
+    left: -10px;
+}
+
+#y-root-x p:nth-of-type(3) {
+    position: relative;
+    top: -43px;
+    left: 10px;
 }
 
 #toggler {
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(0, 193, 255, 1);
     border: 1px solid white;
     display: flex;
     justify-content: center;
@@ -144,7 +160,7 @@ input[type="checkbox"].toggle+label::before {
     color: white;
     width: 9em;
     height: 2.5em;
-    background-color: #cacdd1;
+    background-color: rgba(0, 193, 255, 1);
     border: 2px solid white;
     border-radius: 4em;
     transition: 300ms ease-in-out;
@@ -157,7 +173,7 @@ input[type="checkbox"].toggle+label::after {
     width: 3.3em;
     height: 3.3em;
     background-color: white;
-    border: 2px solid #cacdd1;
+    border: 2px solid rgba(0, 193, 255, 1);
     border-radius: 50%;
     transition: 300ms ease-in-out;
 }
@@ -173,4 +189,15 @@ input[type="checkbox"].toggle:checked+label::after {
     transform: translateX(7.2em);
     background-color: black;
     border: 2px solid #444547;
+}
+
+.dark.mode.switch {
+    background-color: #444547;
+    border: 1px solid black;
+    color: black;
+}
+
+.dark.mode.switch:hover {
+    color: rgba(0, 193, 255, 1);
+
 }

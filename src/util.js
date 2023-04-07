@@ -5,7 +5,3 @@ export function notAMainFunction(operation) {
         && operation != '×' && operation != '÷'
         && operation != 'xy' && operation != 'y√x';
 }
-
-export function modeSwitch(e) {
-    
-}
