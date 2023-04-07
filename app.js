@@ -43,10 +43,9 @@ allBtns.forEach(btn => {
                 } else if (target.textContent == '' && target.id == 'y-root-x') {
                     if (calculator.currentValue == '') return;
                     calculator.chooseOperation('y√x');
-                } else if (target.textContent == '%') {
-                    if (calculator.currentValue == '') return;
-                    calculator.chooseOperation(target.textContent);
-                } else {
+                } else { 
+                    // includes: % x! 
+                    // must have an operation created with the same key name
                     if (calculator.currentValue == '') return;
                     calculator.chooseOperation(target.textContent);
                 }

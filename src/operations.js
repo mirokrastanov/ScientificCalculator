@@ -14,6 +14,7 @@ export const operations = {
     '√': sqrtX,
     'y√x': yRootX,
     '%': calcPercent,
+    'x!': calcFactorial,
 
 }
 // a (prev) | b (current)
@@ -43,4 +44,13 @@ function yRootX(a, b) {     // 2 parameter function = MAIN
 }
 function calcPercent(a) {
     return a / 100;
+}
+function calcFactorial(a) {
+    let res = a;
+    if (a == 1 || a == 0) return 1;
+    while (a > 1) {
+        a--;
+        res *= a;
+    }
+    return res;
 }
