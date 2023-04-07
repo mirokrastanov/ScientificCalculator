@@ -2,9 +2,11 @@ import { operations } from "./operations.js";
 import { notAMainFunction } from "./util.js";
 
 export class Calculator {
-    constructor(previousEl, currentEl) {
+    constructor(previousEl, currentEl, ansDisplayEl, stoDisplayEl) {
         this.previousEl = previousEl;
         this.currentEl = currentEl;
+        this.ansDisplayEl = ansDisplayEl;
+        this.stoDisplayEl = stoDisplayEl;
         this.previousValue = '';
         this.currentValue = '';
         this.operation = undefined;
@@ -96,6 +98,10 @@ export class Calculator {
         this.previousValue = '';
     }
     updateDisplay() {
+        if (this.answer) this.ansDisplayEl.textContent = `Ans: ${this.answer}`;
+        else this.ansDisplayEl.textContent = `Ans: empty`;
+        if (this.storage) this.stoDisplayEl.textContent = `STO: ${this.storage}`;
+        else this.stoDisplayEl.textContent = `STO: empty`;
         if (this.currentValue[this.currentValue.length - 1] == '.') {
             this.currentEl.textContent = this.currentValue;
         } else {

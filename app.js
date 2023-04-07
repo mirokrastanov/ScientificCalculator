@@ -1,10 +1,15 @@
 import { Calculator } from "./src/class.js";
+import { modeSwitch } from "./src/util.js";
 
 const allBtns = document.querySelectorAll('.calculator-grid > button');
 const currentEl = document.querySelector('.current-operand');
 const previousEl = document.querySelector('.previous-operand');
-const calculator = new Calculator(previousEl, currentEl);
+const ansDisplayEl = document.querySelector('#ans-display');
+const stoDisplayEl = document.querySelector('#sto-display');
+const modeToggler = document.querySelector('#check');
+const calculator = new Calculator(previousEl, currentEl, ansDisplayEl, stoDisplayEl);
 
+modeToggler.addEventListener('change', modeSwitch);
 
 allBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
@@ -44,7 +49,7 @@ allBtns.forEach(btn => {
                     if (calculator.currentValue == '') return;
                     // if (calculator.previousValue != '') calculator.compute();
                     calculator.chooseOperation('y√x');
-                } else { 
+                } else {
                     // includes: % x! 
                     // must have an operation created with the same key name
                     if (calculator.currentValue == '') return;
