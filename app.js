@@ -1,4 +1,5 @@
 import { Calculator } from "./src/class.js";
+import { recall, store } from "./src/util.js";
 
 const allBtns = document.querySelectorAll('.calculator-grid > button');
 const currentEl = document.querySelector('.current-operand');
@@ -19,14 +20,18 @@ allBtns.forEach(btn => {
             } else {
                 if (target.textContent == 'AC') {
                     calculator.clear();
-                    calculator.updateDisplay();
                 } else if (target.textContent == 'DEL') {
                     calculator.delete();
-                    calculator.updateDisplay();
+                } else if (target.textContent == 'RCL') {
+                    calculator.clearCurrent();
+                    calculator.appendNumber(recall());
+                } else if (target.textContent == 'STO') {
+                    store(currentEl.textContent);
+                    calculator.clearCurrent();
                 } else {
                     calculator.chooseOperation(target.textContent);
-                    calculator.updateDisplay();
                 }
+                calculator.updateDisplay();
             }
         } else {
             // number

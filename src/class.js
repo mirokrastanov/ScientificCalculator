@@ -14,6 +14,12 @@ export class Calculator {
         this.currentValue = '';
         this.operation = undefined;
     }
+    clearCurrent() {
+        this.currentValue = '';
+    }
+    clearPrev() {
+        this.previousValue = '';
+    }
     delete() {
         this.currentValue = this.currentValue.toString().slice(0, -1);
     }
