@@ -11,6 +11,12 @@ allBtns.forEach(btn => {
         e.preventDefault();
         let target = e.currentTarget;
         // console.log(target.textContent);
+        if (target.textContent == 'π') {
+            calculator.clearCurrent();
+            calculator.appendNumber((Math.PI).toString());
+            calculator.updateDisplay();
+            return;
+        }
         if (target.textContent != Number(target.textContent) && target.textContent != '.') {
             // not a number
             if (target.textContent == '=') {
@@ -36,6 +42,8 @@ allBtns.forEach(btn => {
                 } else if (target.textContent == '' && target.id == 'y-root-x') {
                     if (calculator.currentValue == '') return;
                     calculator.chooseOperation('y√x');
+                } else if (false) {
+
                 } else {
                     if (calculator.currentValue == '') return;
                     calculator.chooseOperation(target.textContent);
