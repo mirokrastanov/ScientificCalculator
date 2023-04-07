@@ -89,3 +89,7 @@ body {
     height: 70%;
 }
 
+#y-root-x p {
+    display: none;
+}
+

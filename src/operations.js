@@ -11,7 +11,7 @@ export const operations = {
     '÷': divide,
     'x2': xPower2,
     'xy': xPowerY,
-
+    'y√x': yRootX,
 
 }
 // a (prev) | b (current)
@@ -28,9 +28,11 @@ function divide(a, b) {     // 2 parameter function = MAIN
     return a / b;
 }
 function xPower2(a) {
-    console.log(a, Math.pow(a, 2));
     return Math.pow(a, 2);
 }
 function xPowerY(a, b) {    // 2 parameter function = MAIN
     return Math.pow(a, b);
+}
+function yRootX(a, b) {
+    return Math.pow(a, (1 / b));
 }

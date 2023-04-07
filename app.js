@@ -33,7 +33,11 @@ allBtns.forEach(btn => {
                     if (calculator.answer == null) return;
                     calculator.clearCurrent();
                     calculator.appendNumber(calculator.callPreviousAnswer());
+                } else if (target.textContent == '' && target.id == 'y-root-x') {
+                    if (calculator.currentValue == '') return;
+                    calculator.chooseOperation('y√x');
                 } else {
+                    if (calculator.currentValue == '') return;
                     calculator.chooseOperation(target.textContent);
                 }
                 calculator.updateDisplay();
