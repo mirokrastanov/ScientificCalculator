@@ -1,5 +1,4 @@
 import { Calculator } from "./src/class.js";
-import { recall, store } from "./src/util.js";
 
 const allBtns = document.querySelectorAll('.calculator-grid > button');
 const currentEl = document.querySelector('.current-operand');
@@ -23,10 +22,12 @@ allBtns.forEach(btn => {
                 } else if (target.textContent == 'DEL') {
                     calculator.delete();
                 } else if (target.textContent == 'RCL') {
+                    if (calculator.storage == null) return;
                     calculator.clearCurrent();
-                    calculator.appendNumber(recall());
+                    calculator.appendNumber(calculator.recall());
                 } else if (target.textContent == 'STO') {
-                    store(currentEl.textContent);
+                    if (currentEl.textContent == '') return;
+                    calculator.store(currentEl.textContent);
                     calculator.clearCurrent();
                 } else {
                     calculator.chooseOperation(target.textContent);
@@ -40,3 +41,4 @@ allBtns.forEach(btn => {
         }
     });
 });
+

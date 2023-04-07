@@ -8,6 +8,18 @@ export class Calculator {
         this.previousValue = '';
         this.currentValue = '';
         this.operation = undefined;
+        this.storage = null;
+    }
+    recall() {
+        let result = this.storage;
+        if (result) {
+            this.storage = null;
+            return result;
+        } else return '';
+    }
+    store(number) {
+        this.storage =  number;
+        return '';
     }
     clear() {
         this.previousValue = '';
