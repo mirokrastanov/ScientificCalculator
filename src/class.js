@@ -102,8 +102,13 @@ export class Calculator {
             this.currentEl.textContent = this.getDisplayNumber(this.currentValue);
         }
         if (this.operation != null) {
-            this.previousEl.textContent =
-                `${this.getDisplayNumber(this.previousValue)} ${this.operation}`;
+            if (this.operation == 'y√x' || this.operation == 'xy') {
+                this.previousEl.textContent =
+                    `x = ${this.getDisplayNumber(this.previousValue)} | ${this.operation}`;
+            } else {
+                this.previousEl.textContent =
+                    `${this.getDisplayNumber(this.previousValue)} ${this.operation}`;
+            }
         } else {
             this.previousEl.textContent = '';
         }
