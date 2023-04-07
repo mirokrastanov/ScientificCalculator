@@ -14,7 +14,7 @@ allBtns.forEach(btn => {
         if (target.textContent != Number(target.textContent) && target.textContent != '.') {
             // not a number
             if (target.textContent == '=') {
-                calculator.compute();
+                if (calculator.previousValue != '') calculator.compute();
                 calculator.updateDisplay();
             } else {
                 if (target.textContent == 'AC') {
