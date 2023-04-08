@@ -67,6 +67,7 @@ allBtns.forEach(btn => {
 
 function loadColorMode(e) {
     let togglerEL = document.querySelector('#toggler');
+    // inc body & display (display with special styles)
     allBtns.forEach(btn => {
         if (this.checked) {
             btn.classList.toggle('dark');
