@@ -32,6 +32,7 @@ export const operations = {
     'hex-dec': hexToDec,
     'hex-bin': hexToBin,
     'hex-oct': hexToOct,
+    '1/x': calcFraction,
 
 }
 // a (prev) | b (current)
@@ -58,6 +59,8 @@ function logarithmOf(a) { return Math.log10(a) }
 function sineFromNum(a) { return Math.sin(a) }
 function cosineFromNum(a) { return Math.cos(a) }
 function tangentFromNum(a) { return Math.tan(a) }
+function calcFraction(a) { return 1 / Number(a) }
+
 // conversions below
 function decToBin(a) { return Number(a).toString(2) } // MAIN conversion
 function decToOct(a) { return Number(a).toString(8) } // MAIN conversion
@@ -65,7 +68,7 @@ function decToHex(a) { return Number(a).toString(16).toUpperCase() } // MAIN con
 
 function binToDec(a) { return parseInt(String(a), 2) } // MAIN conversion
 function binToOct(a) { return decToOct(binToDec(a)) }
-function binToHex(a) { return decToHex(binToDec(a)) } 
+function binToHex(a) { return decToHex(binToDec(a)) }
 
 function octToDec(a) { return parseInt(String(a), 8) } // MAIN conversion
 function octToBin(a) { return decToBin(octToDec(a)) }
