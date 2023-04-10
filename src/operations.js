@@ -58,6 +58,7 @@ function logarithmOf(a) { return Math.log10(a) }
 function sineFromNum(a) { return Math.sin(a) }
 function cosineFromNum(a) { return Math.cos(a) }
 function tangentFromNum(a) { return Math.tan(a) }
+// conversions below
 function decToBin(a) { return Number(a).toString(2) }
 function decToOct(a) { return Number(a).toString(8) }
 function decToHex(a) { return Number(a).toString(16).toUpperCase() }
@@ -67,6 +68,6 @@ function binToHex(a) { return }
 function octToDec(a) { return }
 function octToBin(a) { return }
 function octToHex(a) { return }
-function hexToDec(a) { return 'test' }
-function hexToBin(a) { return }
-function hexToOct(a) { return }
+function hexToDec(a) { return parseInt(String(a), 16) }
+function hexToBin(a) { return parseInt(String(a), 2) }
+function hexToOct(a) { return parseInt(String(a), 8) }
