@@ -7,6 +7,7 @@ const ansDisplayEl = document.querySelector('#ans-display');
 const stoDisplayEl = document.querySelector('#sto-display');
 const modeToggler = document.querySelector('#check');
 const togglerEL = document.querySelector('#toggler');
+const bodyEL = document.querySelector('body');
 
 const calculator = new Calculator(previousEl, currentEl, ansDisplayEl, stoDisplayEl);
 
@@ -76,4 +77,7 @@ function loadColorMode(e) {
     togglerEL.classList.toggle('dark');
     togglerEL.classList.toggle('mode');
     togglerEL.classList.toggle('switch');
+    bodyEL.classList.toggle('dark');
+    bodyEL.classList.toggle('mode');
+    bodyEL.classList.toggle('switch');
 }

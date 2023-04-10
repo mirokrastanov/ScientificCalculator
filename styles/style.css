@@ -216,3 +216,13 @@ input[type="checkbox"].toggle:checked+label::after {
 .dark.mode.switch#toggler:hover {
     background-color: rgba(95, 95, 95, 0.918);
 }
+
+body.dark.mode.switch {
+    background: #444547;
+    border: none;
+}
+
+body.dark.mode.switch:hover {
+    background: #444547;
+    border: none;
+}
