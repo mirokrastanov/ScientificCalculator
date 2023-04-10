@@ -12,8 +12,11 @@ const convCtr = document.querySelector('#conversion-ctr');
 const conversionEl = document.querySelectorAll('.conversion');
 const conversionBg = document.querySelectorAll('option');
 const convertBtn = convCtr.querySelector('button');
+const historyCtr = document.querySelector('#history-ctr');
+const historySelect = historyCtr.querySelector('#history');
 
-const calculator = new Calculator(previousEl, currentEl, ansDisplayEl, stoDisplayEl);
+const calculator = new Calculator(previousEl, currentEl, ansDisplayEl, stoDisplayEl, historySelect);
+calculator.renderHistory();
 
 modeToggler.addEventListener('change', loadColorMode);
 convertBtn.addEventListener('click', (e) => {
@@ -111,4 +114,10 @@ function loadColorMode(e) {
     bodyEL.classList.toggle('dark');
     bodyEL.classList.toggle('mode');
     bodyEL.classList.toggle('switch');
+    historyCtr.classList.toggle('dark');
+    historyCtr.classList.toggle('mode');
+    historyCtr.classList.toggle('switch');
+    historySelect.classList.toggle('dark');
+    historySelect.classList.toggle('mode');
+    historySelect.classList.toggle('switch');
 }

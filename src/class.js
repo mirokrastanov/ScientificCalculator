@@ -2,16 +2,18 @@ import { operations } from "./operations.js";
 import { notAMainFunction } from "./util.js";
 
 export class Calculator {
-    constructor(previousEl, currentEl, ansDisplayEl, stoDisplayEl) {
+    constructor(previousEl, currentEl, ansDisplayEl, stoDisplayEl, historySelect) {
         this.previousEl = previousEl;
         this.currentEl = currentEl;
         this.ansDisplayEl = ansDisplayEl;
         this.stoDisplayEl = stoDisplayEl;
+        this.historySelect = historySelect;
         this.previousValue = '';
         this.currentValue = '';
         this.operation = undefined;
         this.storage = null;
         this.answer = null;
+        this.history = [1, 2, 3];
     }
     callPreviousAnswer() {
         let result = this.answer;
@@ -129,6 +131,8 @@ export class Calculator {
         } else {
             this.currentEl.textContent = this.getDisplayNumber(this.currentValue);
         }
+        this.history.push(this.currentValue);
+        this.renderHistory();
         if (this.operation != null) {
             if (this.operation == 'y√x' || this.operation == 'xy') {
                 this.previousEl.textContent =
@@ -139,6 +143,22 @@ export class Calculator {
             }
         } else {
             this.previousEl.textContent = '';
+        }
+    }
+    renderHistory() {
+        this.historySelect.replaceChildren();
+        if (this.history.length > 0) {
+            this.history.forEach(x => {
+                let el = document.createElement('option');
+                el.textContent = x;
+                this.historySelect.appendChild(el);
+            })
+        } else {
+            let empty = document.createElement('option');
+            empty.setAttribute('value', 'empty');
+            empty.setAttribute('selected', '');
+            empty.textContent = 'Empty';
+            this.historySelect.appendChild(empty);
         }
     }
     getDisplayNumber(number) {

@@ -24,13 +24,49 @@ body {
     /* repeat(7, 80px); */
 }
 
-.calculator-grid>button {
+.calculator-grid>button,
+#history-ctr {
     cursor: pointer;
     font-size: 2rem;
     border: 1px solid white;
     outline: none;
     background-color: rgba(0, 193, 255, 1);
     color: white;
+}
+
+#history-ctr {
+    display: flex;
+    flex-direction: column;
+}
+
+#history-ctr p {
+    display: block;
+    font-size: 1.2rem;
+    height: 35%;
+    text-align: center;
+}
+
+#history {
+    width: 100%;
+    background-color: rgba(0, 193, 255, 1);
+    color: white;
+    border: none;
+    height: 65%;
+    font-size: 1.5rem;
+}
+
+#record {
+    font-size: 1.5rem;
+    
+}
+
+#record:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+
+}
+
+#record p {
+    font-size: 20px;
 }
 
 .calculator-grid>button:hover {
@@ -40,6 +76,10 @@ body {
 
 .span-two {
     grid-column: span 2;
+}
+
+.span-three {
+    grid-column: span 3;
 }
 
 .output {
@@ -92,7 +132,8 @@ body {
     justify-content: center;
 }
 
-#conversion-ctr.dark.mode.switch {
+#conversion-ctr.dark.mode.switch,
+#history-ctr.dark.mode.switch {
     border: 1px solid black;
     border-top: none;
     outline: none;
@@ -118,8 +159,10 @@ button.conversion {
     font-size: 2rem;
 }
 
-.conversion:hover {
+.conversion:hover,
+#history:hover {
     background-color: rgba(255, 255, 255, 0.25);
+
 }
 
 #water-mark {
@@ -246,9 +289,25 @@ input[type="checkbox"].toggle:checked+label::after {
     border: 1px solid black;
 }
 
-.dark.mode.switch#toggler {
+.dark.mode.switch#toggler,
+#history-ctr.dark.mode.switch  {
     background-color: #444547;
     border: 1px solid black;
+    color: black;
+}
+
+#history.dark.mode.switch {
+    background-color: #444547;
+    border: none;
+    color: black;
+}
+
+#history.dark.mode.switch:hover {
+    background-color: rgba(95, 95, 95, 0.918);
+}
+#history.dark.mode.switch option {
+    background-color: #444547;
+    color: black;
 }
 
 #toggler:hover {
