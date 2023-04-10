@@ -86,6 +86,7 @@ export class Calculator {
         if (this.currentValue == '.') return;
         else if (this.currentValue.length > 1 && this.currentValue[0] == '.') {
             this.currentValue = '0' + this.currentValue;
+
         }
         if (this.previousValue != '') {
             this.operation = type;

@@ -23,6 +23,7 @@ convertBtn.addEventListener('click', (e) => {
     let to = target.parentElement.querySelector('select:nth-of-type(2)').value;
     if (from == to) return;
     calculator.conversion(from + '-' + to);
+    // console.log(from + '-' + to, calculator.currentValue);
     calculator.updateDisplay();
 });
 
@@ -38,7 +39,10 @@ allBtns.forEach(btn => {
             calculator.updateDisplay();
             return;
         }
-        if (target.textContent != Number(target.textContent) && target.textContent != '.') {
+        if (target.textContent != Number(target.textContent) && target.textContent != '.'
+            && target.textContent != 'A' && target.textContent != 'B'
+            && target.textContent != 'C' && target.textContent != 'D'
+            && target.textContent != 'E' && target.textContent != 'F') {
             // not a number
             if (target.textContent == '=') {
                 if (calculator.previousValue != '') calculator.compute();

@@ -59,15 +59,19 @@ function sineFromNum(a) { return Math.sin(a) }
 function cosineFromNum(a) { return Math.cos(a) }
 function tangentFromNum(a) { return Math.tan(a) }
 // conversions below
-function decToBin(a) { return Number(a).toString(2) }
-function decToOct(a) { return Number(a).toString(8) }
-function decToHex(a) { return Number(a).toString(16).toUpperCase() }
-function binToDec(a) { return }
-function binToOct(a) { return }
-function binToHex(a) { return }
-function octToDec(a) { return }
-function octToBin(a) { return }
-function octToHex(a) { return }
-function hexToDec(a) { return parseInt(String(a), 16) }
-function hexToBin(a) { return parseInt(String(a), 2) }
-function hexToOct(a) { return parseInt(String(a), 8) }
+function decToBin(a) { return Number(a).toString(2) } // MAIN conversion
+function decToOct(a) { return Number(a).toString(8) } // MAIN conversion
+function decToHex(a) { return Number(a).toString(16).toUpperCase() } // MAIN conversion
+
+function binToDec(a) { return parseInt(String(a), 2) } // MAIN conversion
+function binToOct(a) { return decToOct(binToDec(a)) }
+function binToHex(a) { return decToHex(binToDec(a)) } 
+
+function octToDec(a) { return parseInt(String(a), 8) } // MAIN conversion
+function octToBin(a) { return decToBin(octToDec(a)) }
+function octToHex(a) { return decToHex(octToDec(a)) }
+
+function hexToDec(a) { return parseInt(String(a), 16) } // MAIN conversion 
+function hexToBin(a) { return decToBin(hexToDec(String(a))) }
+function hexToOct(a) { return decToOct(hexToDec(String(a))) }
+
