@@ -16,6 +16,7 @@ export const operations = {
     '%': calcPercent,
     'x!': calcFactorial,
     'ln': naturalLog,
+    'log': logarithmOf,
 
 }
 // a (prev) | b (current)
@@ -57,4 +58,7 @@ function calcFactorial(a) {
 }
 function naturalLog(a) {
     return Math.log(Number(a));
+}
+function logarithmOf(a) {
+    return Math.log10(Number(a));
 }
