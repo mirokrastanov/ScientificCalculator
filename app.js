@@ -52,7 +52,7 @@ allBtns.forEach(btn => {
                     // if (calculator.previousValue != '') calculator.compute();
                     calculator.chooseOperation('y√x');
                 } else {
-                    // includes: % x! 
+                    // includes: % x! ln
                     // must have an operation created with the same key name
                     if (calculator.currentValue == '') return;
                     if (calculator.previousValue != '') calculator.compute();

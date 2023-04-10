@@ -1,5 +1,5 @@
 // function strings
-//  +, -, ×, ÷, x2, 
+//  +, -, ×, ÷, x2, xy, √, y√x, %, x!, 
 
 // after adding a new --- 2 parameter function (a MAIN function) --- go to util and 
 // update the --- notAMainFunction --- to include the new operations[keyName]
@@ -15,6 +15,7 @@ export const operations = {
     'y√x': yRootX,
     '%': calcPercent,
     'x!': calcFactorial,
+    'ln': naturalLog,
 
 }
 // a (prev) | b (current)
@@ -53,4 +54,7 @@ function calcFactorial(a) {
         res *= a;
     }
     return res;
+}
+function naturalLog(a) {
+    return Math.log(Number(a));
 }
