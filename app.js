@@ -6,6 +6,8 @@ const previousEl = document.querySelector('.previous-operand');
 const ansDisplayEl = document.querySelector('#ans-display');
 const stoDisplayEl = document.querySelector('#sto-display');
 const modeToggler = document.querySelector('#check');
+const togglerEL = document.querySelector('#toggler');
+
 const calculator = new Calculator(previousEl, currentEl, ansDisplayEl, stoDisplayEl);
 
 modeToggler.addEventListener('change', loadColorMode);
@@ -66,30 +68,12 @@ allBtns.forEach(btn => {
 });
 
 function loadColorMode(e) {
-    let togglerEL = document.querySelector('#toggler');
-    // inc body & display (display with special styles)
     allBtns.forEach(btn => {
-        if (this.checked) {
-            btn.classList.toggle('dark');
-            btn.classList.toggle('mode');
-            btn.classList.toggle('switch');
-        } else {
-            btn.classList.toggle('dark');
-            btn.classList.toggle('mode');
-            btn.classList.toggle('switch');
-        }
+        btn.classList.toggle('dark');
+        btn.classList.toggle('mode');
+        btn.classList.toggle('switch');
     })
-    if (this.checked) {
-        togglerEL.classList.toggle('dark');
-        togglerEL.classList.toggle('mode');
-        togglerEL.classList.toggle('switch');
-        togglerEL.style.border = '1px solid black';
-        togglerEL.style.backgroundColor = '#444547';
-    } else {
-        togglerEL.style.backgroundColor = 'rgba(0, 193, 255, 1)';
-        togglerEL.style.border = '1px solid white';
-        togglerEL.classList.toggle('dark');
-        togglerEL.classList.toggle('mode');
-        togglerEL.classList.toggle('switch');
-    }
+    togglerEL.classList.toggle('dark');
+    togglerEL.classList.toggle('mode');
+    togglerEL.classList.toggle('switch');
 }
