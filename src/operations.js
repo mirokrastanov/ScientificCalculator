@@ -17,8 +17,10 @@ export const operations = {
     'x!': calcFactorial,
     'ln': naturalLog,
     'log': logarithmOf,
-    'sin': sinFromNum,
-    
+    'sin': sineFromNum,
+    'cos': cosineFromNum,
+    'tan': tangentFromNum,
+
 }
 // a (prev) | b (current)
 function sum(a, b) {        // 2 parameter function = MAIN
@@ -63,6 +65,12 @@ function naturalLog(a) {
 function logarithmOf(a) {
     return Math.log10(a);
 }
-function sinFromNum(a) {
+function sineFromNum(a) {
     return Math.sin(a);
+}
+function cosineFromNum(a) {
+    return Math.cos(a);
+}
+function tangentFromNum(a) {
+    return Math.tan(a);
 }

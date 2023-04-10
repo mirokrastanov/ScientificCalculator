@@ -52,7 +52,7 @@ allBtns.forEach(btn => {
                     // if (calculator.previousValue != '') calculator.compute();
                     calculator.chooseOperation('y√x');
                 } else {
-                    // includes: % x! ln log sin 
+                    // includes: % x! ln log sin cos tan 
                     // must have an operation created with the same key name
                     if (calculator.currentValue == '') return;
                     if (calculator.previousValue != '') calculator.compute();
