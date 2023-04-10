@@ -22,7 +22,7 @@ convertBtn.addEventListener('click', (e) => {
     let from = target.parentElement.querySelector('select:nth-of-type(1)').value;
     let to = target.parentElement.querySelector('select:nth-of-type(2)').value;
     if (from == to) return;
-    calculator.chooseOperation(from + '-' + to);
+    calculator.conversion(from + '-' + to);
     calculator.updateDisplay();
 });
 

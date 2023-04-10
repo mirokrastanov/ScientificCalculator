@@ -35,33 +35,15 @@ export const operations = {
 
 }
 // a (prev) | b (current)
-function sum(a, b) {        // 2 parameter function = MAIN
-    return a + b;
-}
-function subtract(a, b) {       // 2 parameter function = MAIN
-    return a - b;
-}
-function multiply(a, b) {       // 2 parameter function = MAIN
-    return a * b;
-}
-function divide(a, b) {     // 2 parameter function = MAIN
-    return a / b;
-}
-function xPower2(a) {
-    return Math.pow(a, 2);
-}
-function xPowerY(a, b) {    // 2 parameter function = MAIN
-    return Math.pow(a, b);
-}
-function sqrtX(a) {
-    return Math.sqrt(a);
-}
-function yRootX(a, b) {     // 2 parameter function = MAIN
-    return Math.pow(a, (1 / b));
-}
-function calcPercent(a) {
-    return a / 100;
-}
+function sum(a, b) { return a + b }      // 2 parameter function = MAIN
+function subtract(a, b) { return a - b }     // 2 parameter function = MAIN
+function multiply(a, b) { return a * b }     // 2 parameter function = MAIN
+function divide(a, b) { return a / b }  // 2 parameter function = MAIN
+function xPower2(a) { return Math.pow(a, 2) }
+function xPowerY(a, b) { return Math.pow(a, b) }  // 2 parameter function = MAIN
+function sqrtX(a) { return Math.sqrt(a) }
+function yRootX(a, b) { return Math.pow(a, (1 / b)) }   // 2 parameter function = MAIN
+function calcPercent(a) { return a / 100 }
 function calcFactorial(a) {
     let res = a;
     if (a == 1 || a == 0) return 1;
@@ -71,20 +53,20 @@ function calcFactorial(a) {
     }
     return res;
 }
-function naturalLog(a) {
-    return Math.log(a);
-}
-function logarithmOf(a) {
-    return Math.log10(a);
-}
-function sineFromNum(a) {
-    return Math.sin(a);
-}
-function cosineFromNum(a) {
-    return Math.cos(a);
-}
-function tangentFromNum(a) {
-    return Math.tan(a);
-}
-
-
+function naturalLog(a) { return Math.log(a) }
+function logarithmOf(a) { return Math.log10(a) }
+function sineFromNum(a) { return Math.sin(a) }
+function cosineFromNum(a) { return Math.cos(a) }
+function tangentFromNum(a) { return Math.tan(a) }
+function decToBin(a) { return Number(a).toString(2) }
+function decToOct(a) { return Number(a).toString(8) }
+function decToHex(a) { return Number(a).toString(16).toUpperCase() }
+function binToDec(a) { return }
+function binToOct(a) { return }
+function binToHex(a) { return }
+function octToDec(a) { return }
+function octToBin(a) { return }
+function octToHex(a) { return }
+function hexToDec(a) { return 'test' }
+function hexToBin(a) { return }
+function hexToOct(a) { return }

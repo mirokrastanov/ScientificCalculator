@@ -81,6 +81,24 @@ export class Calculator {
         this.previousValue = this.currentValue;
         this.currentValue = '';
     }
+    conversion(type) {
+        if (this.currentValue == '') return;
+        if (this.currentValue == '.') return;
+        else if (this.currentValue.length > 1 && this.currentValue[0] == '.') {
+            this.currentValue = '0' + this.currentValue;
+        }
+        if (this.previousValue != '') {
+            this.operation = type;
+            this.compute();
+        }
+        let computation = operations[type](this.currentValue);
+        console.log(computation);
+        if (computation == 'NAN' || computation == 'NaN')
+        this.answer = computation.toString();
+        this.currentValue = computation.toString();
+        this.operation = undefined;
+        this.previousValue = '';
+    }
     compute() {
         let computation;
         let prev = Number(this.previousValue);
@@ -98,10 +116,15 @@ export class Calculator {
         this.previousValue = '';
     }
     updateDisplay() {
-        if (this.answer) this.ansDisplayEl.textContent = `Ans: ${this.answer}`;
+        if (this.answer == 'NAN' || this.answer == 'NaN') null;
+        else if (this.answer) this.ansDisplayEl.textContent = `Ans: ${this.answer}`;
         else this.ansDisplayEl.textContent = `Ans: empty`;
         if (this.storage) this.stoDisplayEl.textContent = `STO: ${this.storage}`;
         else this.stoDisplayEl.textContent = `STO: empty`;
+        if (this.currentValue == 'NAN' || this.currentValue == 'NaN') {
+            this.currentEl.textContent = 'Error! Press \'AC\' to clear.';
+            return;
+        }
         if (this.currentValue[this.currentValue.length - 1] == '.') {
             this.currentEl.textContent = this.currentValue;
         } else {
