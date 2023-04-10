@@ -11,11 +11,20 @@ const bodyEL = document.querySelector('body');
 const convCtr = document.querySelector('#conversion-ctr');
 const conversionEl = document.querySelectorAll('.conversion');
 const conversionBg = document.querySelectorAll('option');
-
+const convertBtn = convCtr.querySelector('button');
 
 const calculator = new Calculator(previousEl, currentEl, ansDisplayEl, stoDisplayEl);
 
 modeToggler.addEventListener('change', loadColorMode);
+convertBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    let target = e.target;
+    let from = target.parentElement.querySelector('select:nth-of-type(1)').value;
+    let to = target.parentElement.querySelector('select:nth-of-type(2)').value;
+    if (from == to) return;
+    calculator.chooseOperation(from + '-' + to);
+    calculator.updateDisplay();
+});
 
 allBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
@@ -55,11 +64,6 @@ allBtns.forEach(btn => {
                     if (calculator.currentValue == '') return;
                     // if (calculator.previousValue != '') calculator.compute();
                     calculator.chooseOperation('y√x');
-                } else if (target.textContent == 'CONVERT') {
-                    // select proper name (eg: dec-hex) and 
-                    // run the chooseOP with that word
-                    // do a return condition if w1 = w2
-
                 } else {
                     // includes: % x! ln log sin cos tan 
                     // must have an operation created with the same key name
@@ -77,6 +81,7 @@ allBtns.forEach(btn => {
     });
 });
 
+// TODO - add all into one array and switch them within one loop
 function loadColorMode(e) {
     allBtns.forEach(btn => {
         btn.classList.toggle('dark');

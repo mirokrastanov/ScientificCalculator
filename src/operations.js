@@ -20,6 +20,18 @@ export const operations = {
     'sin': sineFromNum,
     'cos': cosineFromNum,
     'tan': tangentFromNum,
+    'dec-bin': decToBin,
+    'dec-oct': decToOct,
+    'dec-hex': decToHex,
+    'bin-dec': binToDec,
+    'bin-oct': binToOct,
+    'bin-hex': binToHex,
+    'oct-dec': octToDec,
+    'oct-bin': octToBin,
+    'oct-hex': octToHex,
+    'hex-dec': hexToDec,
+    'hex-bin': hexToBin,
+    'hex-oct': hexToOct,
 
 }
 // a (prev) | b (current)
@@ -74,3 +86,5 @@ function cosineFromNum(a) {
 function tangentFromNum(a) {
     return Math.tan(a);
 }
+
+
