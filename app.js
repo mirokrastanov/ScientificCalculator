@@ -92,6 +92,7 @@ allBtns.forEach(btn => {
 
 // TODO - add all into one array and switch them within one loop
 function loadColorMode(e) {
+    e.preventDefault();
     allBtns.forEach(btn => {
         btn.classList.toggle('dark');
         btn.classList.toggle('mode');
