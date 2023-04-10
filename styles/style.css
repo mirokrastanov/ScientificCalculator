@@ -19,7 +19,7 @@ body {
     align-content: center;
     min-height: 100vh;
     grid-template-columns: repeat(7, 100px);
-    grid-template-rows: minmax(120px, auto) 30px 80px 80px 80px 80px 80px 80px;
+    grid-template-rows: minmax(120px, auto) 30px 70px 70px 70px 70px 70px 70px 50px;
     /* repeat(7, 80px); */
 }
 
@@ -80,6 +80,47 @@ body {
     font-size: 1.2rem;
 }
 
+#conversion-ctr {
+    grid-column: 1 / -1;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(0, 193, 255, 1);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#conversion-ctr.dark.mode.switch {
+    border: 1px solid black;
+    border-top: none;
+    outline: none;
+}
+
+.conversion,
+option {
+    cursor: pointer;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    background-color: rgba(0, 193, 255, 1);
+    color: white;
+    width: 240px;
+    height: 100%;
+}
+
+select.conversion {
+    border-right: 1px solid white;
+}
+
+button.conversion {
+    font-size: 2rem;
+}
+
+.conversion:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
 #water-mark {
     position: fixed;
     bottom: 0px;
@@ -133,7 +174,7 @@ body {
     border: 1px solid white;
     display: flex;
     justify-content: center;
-    height: 80px;
+    height: 70px;
 }
 
 input[type="checkbox"].toggle {

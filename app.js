@@ -8,6 +8,10 @@ const stoDisplayEl = document.querySelector('#sto-display');
 const modeToggler = document.querySelector('#check');
 const togglerEL = document.querySelector('#toggler');
 const bodyEL = document.querySelector('body');
+const convCtr = document.querySelector('#conversion-ctr');
+const conversionEl = document.querySelectorAll('.conversion');
+const conversionBg = document.querySelectorAll('option');
+
 
 const calculator = new Calculator(previousEl, currentEl, ansDisplayEl, stoDisplayEl);
 
@@ -51,6 +55,11 @@ allBtns.forEach(btn => {
                     if (calculator.currentValue == '') return;
                     // if (calculator.previousValue != '') calculator.compute();
                     calculator.chooseOperation('y√x');
+                } else if (target.textContent == 'CONVERT') {
+                    // select proper name (eg: dec-hex) and 
+                    // run the chooseOP with that word
+                    // do a return condition if w1 = w2
+
                 } else {
                     // includes: % x! ln log sin cos tan 
                     // must have an operation created with the same key name
@@ -74,6 +83,19 @@ function loadColorMode(e) {
         btn.classList.toggle('mode');
         btn.classList.toggle('switch');
     })
+    conversionEl.forEach(x => {
+        x.classList.toggle('dark');
+        x.classList.toggle('mode');
+        x.classList.toggle('switch');
+    })
+    conversionBg.forEach(x => {
+        x.classList.toggle('dark');
+        x.classList.toggle('mode');
+        x.classList.toggle('switch');
+    })
+    convCtr.classList.toggle('dark');
+    convCtr.classList.toggle('mode');
+    convCtr.classList.toggle('switch');
     togglerEL.classList.toggle('dark');
     togglerEL.classList.toggle('mode');
     togglerEL.classList.toggle('switch');
