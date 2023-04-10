@@ -17,7 +17,8 @@ export const operations = {
     'x!': calcFactorial,
     'ln': naturalLog,
     'log': logarithmOf,
-
+    'sin': sinFromNum,
+    
 }
 // a (prev) | b (current)
 function sum(a, b) {        // 2 parameter function = MAIN
@@ -57,8 +58,11 @@ function calcFactorial(a) {
     return res;
 }
 function naturalLog(a) {
-    return Math.log(Number(a));
+    return Math.log(a);
 }
 function logarithmOf(a) {
-    return Math.log10(Number(a));
+    return Math.log10(a);
+}
+function sinFromNum(a) {
+    return Math.sin(a);
 }
