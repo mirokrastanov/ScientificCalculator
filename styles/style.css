@@ -16,10 +16,11 @@ body {
 .calculator-grid {
     display: grid;
     justify-content: center;
-    align-content: center;
+    align-content: baseline;
+    padding-top: 100px;
     min-height: 100vh;
     grid-template-columns: repeat(7, 100px);
-    grid-template-rows: minmax(120px, auto) 30px 70px 70px 70px 70px 70px 70px 50px;
+    grid-template-rows: minmax(120px, auto) 30px 70px 70px 70px 70px 70px 70px 70px 50px;
     /* repeat(7, 80px); */
 }
 

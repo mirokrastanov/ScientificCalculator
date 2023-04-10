@@ -92,8 +92,6 @@ export class Calculator {
             this.compute();
         }
         let computation = operations[type](this.currentValue);
-        console.log(computation);
-        if (computation == 'NAN' || computation == 'NaN')
         this.answer = computation.toString();
         this.currentValue = computation.toString();
         this.operation = undefined;
