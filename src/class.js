@@ -13,7 +13,7 @@ export class Calculator {
         this.operation = undefined;
         this.storage = null;
         this.answer = null;
-        this.history = [1, 2, 3];
+        this.history = [];
     }
     callPreviousAnswer() {
         let result = this.answer;
@@ -99,6 +99,7 @@ export class Calculator {
         this.currentValue = computation.toString();
         this.operation = undefined;
         this.previousValue = '';
+        this.history.push(this.currentValue);
     }
     compute() {
         let computation;
@@ -115,6 +116,7 @@ export class Calculator {
         this.currentValue = computation.toString();
         this.operation = undefined;
         this.previousValue = '';
+        this.history.push(this.currentValue);
     }
     updateDisplay() {
         if (this.answer == 'NAN' || this.answer == 'NaN') null;
@@ -131,7 +133,6 @@ export class Calculator {
         } else {
             this.currentEl.textContent = this.getDisplayNumber(this.currentValue);
         }
-        this.history.push(this.currentValue);
         this.renderHistory();
         if (this.operation != null) {
             if (this.operation == 'y√x' || this.operation == 'xy') {
