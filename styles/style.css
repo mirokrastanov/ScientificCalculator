@@ -57,12 +57,10 @@ body {
 
 #record {
     font-size: 1.5rem;
-    
 }
 
 #record:hover {
     background-color: rgba(255, 255, 255, 0.25);
-
 }
 
 #record p {
@@ -290,7 +288,7 @@ input[type="checkbox"].toggle:checked+label::after {
 }
 
 .dark.mode.switch#toggler,
-#history-ctr.dark.mode.switch  {
+#history-ctr.dark.mode.switch {
     background-color: #444547;
     border: 1px solid black;
     color: black;
@@ -305,6 +303,7 @@ input[type="checkbox"].toggle:checked+label::after {
 #history.dark.mode.switch:hover {
     background-color: rgba(95, 95, 95, 0.918);
 }
+
 #history.dark.mode.switch option {
     background-color: #444547;
     color: black;
@@ -326,4 +325,194 @@ body.dark.mode.switch {
 body.dark.mode.switch:hover {
     background: #444547;
     border: none;
+}
+
+@media all and (max-width: 700px) {
+    body {
+        background: rgba(0, 193, 255, 1);
+    }
+
+    .calculator-grid {
+        padding-top: 10px;
+        grid-template-columns: repeat(7, 70px);
+        grid-template-rows: minmax(120px, auto) 30px 80px 80px 80px 80px 80px 80px 80px 50px;
+    }
+
+    .calculator-grid>button,
+    #history-ctr {
+        font-size: 1.5rem;
+    }
+
+    #y-root-x p:nth-of-type(1) {
+        left: -13px;
+        top: 14px;
+        font-size: 20px;
+    }
+
+    #y-root-x p:nth-of-type(2) {
+        font-size: 2rem;
+        top: 5px;
+        left: -10px;
+    }
+
+    #y-root-x p:nth-of-type(3) {
+        font-size: 2rem;
+        top: -33px;
+        left: 10px;
+    }
+
+    #record {
+        padding: 0;
+        margin: 0;
+        font-size: 1.2rem;
+    }
+
+    #toggler {
+        height: 80px;
+    }
+
+    input[type="checkbox"].toggle+label::before {
+        width: 7em;
+        height: 2em;
+    }
+
+    input[type="checkbox"].toggle+label::after {
+        left: 0.3em;
+        width: 2.7em;
+        height: 2.7em;
+    }
+
+    input[type="checkbox"].toggle:checked+label::after {
+        transform: translateX(5.4em);
+    }
+
+    #conversion-ctr select.conversion option {
+        font-size: 1.2rem;
+    }
+
+    button.conversion {
+        font-size: 1.5rem;
+    }
+
+    select#history option {
+        font-size: 1.2rem;
+    }
+
+    .output .previous-operand {
+        font-size: 1.4rem;
+    }
+
+    .output .current-operand {
+        font-size: 2.2rem;
+    }
+}
+
+@media all and (max-width: 500px) {
+    body {
+        background: rgba(0, 193, 255, 1);
+    }
+
+    .calculator-grid {
+        padding-top: 0px;
+        grid-template-columns: repeat(7, 55px);
+        grid-template-rows: minmax(120px, auto) 40px 80px 80px 80px 80px 80px 80px 80px 50px;
+        transform: scale(0.7);
+    }
+
+    .calculator-grid>button,
+    #history-ctr {
+        font-size: 1.5rem;
+        padding-left: 0;
+    }
+
+    #history {
+        font-size: 1.2rem;
+    }
+
+    #y-root-x p:nth-of-type(1) {
+        left: -13px;
+        top: 14px;
+        font-size: 18px;
+    }
+
+    #y-root-x p:nth-of-type(2) {
+        font-size: 1.7rem;
+        top: 5px;
+        left: -10px;
+    }
+
+    #y-root-x p:nth-of-type(3) {
+        font-size: 2rem;
+        top: -30px;
+        left: 10px;
+    }
+
+    #record {
+        padding: 0;
+        margin: 0;
+        font-size: 0.9rem;
+    }
+
+    #record p {
+        font-size: 1.5rem;
+    }
+
+    #toggler {
+        height: 80px;
+    }
+
+    input[type="checkbox"].toggle+label::before {
+        width: 5em;
+        height: 1.7em;
+    }
+
+    input[type="checkbox"].toggle+label::after {
+        left: 0.5em;
+        width: 1.3em;
+        height: 2.5em;
+        border-radius: 10px;
+    }
+
+    input[type="checkbox"].toggle:checked+label::after {
+        transform: translateX(4.6em);
+    }
+
+    .conversion,
+    option {
+        font-size: 1.2rem;
+    }
+
+    button.conversion {
+        font-size: 1.2rem;
+    }
+
+    #conversion-ctr select.conversion option {
+        font-size: 0.8rem;
+    }
+
+    select#history option {
+        font-size: 0.8rem;
+    }
+
+    .output .previous-operand {
+        font-size: 1.4rem;
+    }
+
+    .output .current-operand {
+        font-size: 2.2rem;
+    }
+}
+
+@media all and (max-width: 270px) {
+    .calculator-grid {
+        padding-top: 0px;
+        transform: scale(0.6);
+    }
+}
+
+@media all and (max-width: 230px) {
+    .calculator-grid {
+        padding-top: 0px;
+        transform: scale(0.5);
+    }
 }
