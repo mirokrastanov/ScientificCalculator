@@ -99,7 +99,7 @@ export class Calculator {
         this.currentValue = computation.toString();
         this.operation = undefined;
         this.previousValue = '';
-        this.history.push(this.currentValue);
+        this.history.unshift(this.getDisplayNumber(this.currentValue));
     }
     compute() {
         let computation;
@@ -116,7 +116,7 @@ export class Calculator {
         this.currentValue = computation.toString();
         this.operation = undefined;
         this.previousValue = '';
-        this.history.push(this.currentValue);
+        this.history.unshift(this.getDisplayNumber(this.currentValue));
     }
     updateDisplay() {
         if (this.answer == 'NAN' || this.answer == 'NaN') null;

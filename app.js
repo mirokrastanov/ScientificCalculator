@@ -72,7 +72,8 @@ allBtns.forEach(btn => {
                     // if (calculator.previousValue != '') calculator.compute();
                     calculator.chooseOperation('y√x');
                 } else if (target.textContent == 'UseHistory') {
-                    calculator.appendNumber(historySelect.value);
+                    if (historySelect.value == 'empty') return;
+                    calculator.appendNumber(historySelect.value.split(',').join(''));
                 } else {
                     // includes: % x! ln log sin cos tan 
                     // must have an operation created with the same key name
