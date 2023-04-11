@@ -424,10 +424,9 @@ body.dark.mode.switch:hover {
     }
 
     .calculator-grid {
-        padding-top: 0px;
-        grid-template-columns: repeat(7, 55px);
+        padding-top: 20px;
+        grid-template-columns: repeat(7, 65px);
         grid-template-rows: minmax(120px, auto) 40px 80px 80px 80px 80px 80px 80px 80px 50px;
-        transform: scale(0.7);
     }
 
     .calculator-grid>button,
@@ -478,14 +477,13 @@ body.dark.mode.switch:hover {
     }
 
     input[type="checkbox"].toggle+label::after {
-        left: 0.5em;
-        width: 1.3em;
+        left: 0.4em;
+        width: 2.5em;
         height: 2.5em;
-        border-radius: 10px;
     }
 
     input[type="checkbox"].toggle:checked+label::after {
-        transform: translateX(4.6em);
+        transform: translateX(4.8em);
     }
 
     .conversion,
@@ -513,19 +511,35 @@ body.dark.mode.switch:hover {
         font-size: 2.2rem;
     }
 }
+@media all and (max-width: 450px) {
+    .calculator-grid {
+        transform: scale(0.9);
+    }
+}
+@media all and (max-width: 400px) {
+    .calculator-grid {
+        transform: scale(0.78);
+    }
+}
+@media all and (max-width: 350px) {
+    .calculator-grid {
+        transform: scale(0.6);
+    }
+}
 
 @media all and (max-width: 270px) {
     .calculator-grid {
         padding-top: 0px;
-        transform: scale(0.6);
+        transform: scale(0.5);
     }
 }
 
 @media all and (max-width: 230px) {
     .calculator-grid {
         padding-top: 0px;
-        transform: scale(0.5);
+        transform: scale(0.4);
     }
+
     #water-mark a {
         font-size: 0.8rem;
     }
