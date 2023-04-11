@@ -333,7 +333,7 @@ body.dark.mode.switch:hover {
     }
 
     .calculator-grid {
-        padding-top: 10px;
+        padding-top: 20px;
         grid-template-columns: repeat(7, 70px);
         grid-template-rows: minmax(120px, auto) 40px 80px 80px 80px 80px 80px 80px 80px 50px;
     }
@@ -513,12 +513,13 @@ body.dark.mode.switch:hover {
 }
 @media all and (max-width: 450px) {
     .calculator-grid {
+        padding-top: 0px;
         transform: scale(0.9);
     }
 }
 @media all and (max-width: 400px) {
     .calculator-grid {
-        transform: scale(0.78);
+        transform: scale(0.75);
     }
 }
 @media all and (max-width: 350px) {
