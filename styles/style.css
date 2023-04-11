@@ -405,6 +405,17 @@ body.dark.mode.switch:hover {
     .output .current-operand {
         font-size: 2.2rem;
     }
+
+    #water-mark {
+        position: fixed;
+        padding: 0px;
+        margin: 0px auto;
+        height: fit-content;
+        width: fit-content;
+        left: 0px;
+        top: 0px;
+
+    }
 }
 
 @media all and (max-width: 500px) {
@@ -514,5 +525,8 @@ body.dark.mode.switch:hover {
     .calculator-grid {
         padding-top: 0px;
         transform: scale(0.5);
+    }
+    #water-mark a {
+        font-size: 0.8rem;
     }
 }
