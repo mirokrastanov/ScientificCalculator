@@ -335,7 +335,7 @@ body.dark.mode.switch:hover {
     .calculator-grid {
         padding-top: 10px;
         grid-template-columns: repeat(7, 70px);
-        grid-template-rows: minmax(120px, auto) 30px 80px 80px 80px 80px 80px 80px 80px 50px;
+        grid-template-rows: minmax(120px, auto) 40px 80px 80px 80px 80px 80px 80px 80px 50px;
     }
 
     .calculator-grid>button,
