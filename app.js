@@ -46,7 +46,7 @@ allBtns.forEach(btn => {
             && target.textContent != 'A' && target.textContent != 'B'
             && target.textContent != 'C' && target.textContent != 'D'
             && target.textContent != 'E' && target.textContent != 'F') {
-            // not a number
+            // not a number 
             if (target.textContent == '=') {
                 if (calculator.previousValue != '') calculator.compute();
                 calculator.updateDisplay();
@@ -68,16 +68,27 @@ allBtns.forEach(btn => {
                     calculator.clearCurrent();
                     calculator.appendNumber(calculator.callPreviousAnswer());
                 } else if (target.id == 'y-root-x') {
-                    if (calculator.currentValue == '') return;
+                    if (calculator.currentValue == '') {
+                        if (calculator.previousValue == '') return;
+                    }
                     // if (calculator.previousValue != '') calculator.compute();
                     calculator.chooseOperation('y√x');
                 } else if (target.textContent == 'UseHistory') {
                     if (historySelect.value == 'empty') return;
                     calculator.appendNumber(historySelect.value.split(',').join(''));
                 } else {
-                    // includes: % x! ln log sin cos tan 
+                    // includes: % x! ln log sin cos tan and more
                     // must have an operation created with the same key name
-                    if (calculator.currentValue == '') return;
+                    if (calculator.currentValue == '') {
+                        if (target.textContent != '+' && target.textContent != '-'
+                            && target.textContent != '×' && target.textContent != '÷'
+                            && target.textContent != 'xy' && target.textContent != 'y√x')
+                            return;
+                    } else {
+                        calculator.chooseOperation(target.textContent);
+                        calculator.updateDisplay();
+                        return;
+                    }
                     if (calculator.previousValue != '') calculator.compute();
                     calculator.chooseOperation(target.textContent);
                 }
