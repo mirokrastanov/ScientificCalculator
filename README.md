@@ -4,7 +4,7 @@ A feature-rich JavaScript-based scientific calculator with Light and Dark modes,
 <p align="center"><a href="https://scientific-calculator.mirokrastanov.repl.co/"><img src="https://raw.githubusercontent.com/mirokrastanov/Software-Engineering-SoftUni/main/miscellaneous/sc-calc-1.png" alt="img-banner" height="300px"></a></p>
 
 ## Description
-This scientific calculator is Fully Responsive and work with multiple resolutions - supporting most Smartphone & Tablet screens on the market. It offers various features and here is a list of them:
+This scientific calculator is Fully Responsive and works with multiple resolutions - supporting most Smartphone & Tablet screens on the market. It offers various features and here is a list of them:
 - Ability to change between Light and Dark mode.
 - Responsive Design - support for various resolutions
 - Can perform the four basic operations of arithmetic. - Addition, Subtraction, Multiplication & Division.
